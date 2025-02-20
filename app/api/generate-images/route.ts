@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { ImageModel, experimental_generateImage as generateImage } from "ai";
 //import { openai } from "@ai-sdk/openai";
 import { fireworks } from "@ai-sdk/fireworks";
-//import { replicate } from "@ai-sdk/replicate";
+import { replicate } from "@ai-sdk/replicate";
 //import { vertex } from "@ai-sdk/google-vertex/edge";
 import { ProviderKey } from "@/lib/provider-config";
 import { GenerateImageRequest } from "@/lib/api-types";
@@ -32,11 +32,11 @@ const providerConfig: Record<ProviderKey, ProviderConfig> = {
     createImageModel: fireworks.image,
     dimensionFormat: "aspectRatio",
   },
-/*  replicate: {
+  replicate: {
     createImageModel: replicate.image,
     dimensionFormat: "size",
   },
-  vertex: {
+/*  vertex: {
     createImageModel: vertex.image,
     dimensionFormat: "aspectRatio",
   },

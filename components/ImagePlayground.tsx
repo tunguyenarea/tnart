@@ -60,8 +60,8 @@ export function ImagePlayground({
   };
 
   const providerToModel = {
-/*    replicate: selectedModels.replicate,
-    vertex: selectedModels.vertex,
+    replicate: selectedModels.replicate,
+/*    vertex: selectedModels.vertex,
     openai: selectedModels.openai,
 */
     fireworks: selectedModels.fireworks,
@@ -122,7 +122,7 @@ export function ImagePlayground({
                 <div className="md:hidden">
                   <ModelCardCarousel models={getModelProps()} />
                 </div>
-                <div className="hidden md:grid md:grid-cols-1 2xl:grid-cols-1 gap-8">
+                <div className="hidden md:grid md:grid-cols-2 2xl:grid-cols-2 gap-8">
                   {getModelProps().map((props) => (
                     <ModelSelect key={props.label} {...props} />
                   ))}
